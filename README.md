@@ -40,7 +40,8 @@ scraper.save()
 ```
 
 # To run unittest
-```cd wpscraper  
+```
+cd wpscraper  
 python -m unittest test_wpscraper  
 ```
 
