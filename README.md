@@ -9,7 +9,7 @@ README.md
 setup.py   
 wpscraper/wpscraper.py  
 wpscraper/datastores.py   
-wpscraper/test_wpscraper.py  
+tests/test_wpscraper.py  
 
 # Installation
 Step 1&2 are optional but recommended  
@@ -41,7 +41,6 @@ scraper.save()
 
 # To run unittest
 ```
-cd wpscraper  
 python -m unittest test_wpscraper  
 ```
 
