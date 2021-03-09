@@ -1,0 +1,23 @@
+language: python
+python:
+  - 3
+
+services:
+  - docker
+
+#Prer-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+beforer_script:
+  - echo "no tests"
+
+script:
+  - docker --verion # print the version for logging
+  - docker build -t wpscraper .
+  - docker tag wpscraper lovesantacruz/wpscraper:latest
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push lovesantacruz/wpscraper
