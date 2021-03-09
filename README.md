@@ -9,7 +9,7 @@ README.md
 setup.py   
 wpscraper/wpscraper.py  
 wpscraper/datastores.py   
-wpscraper/test_wpscraper.py  
+tests/test_wpscraper.py  
 
 # Installation
 Step 1&2 are optional but recommended  
@@ -24,7 +24,8 @@ Step 1&2 are optional but recommended
 4. Call save to put the result in the datastore. 
 
 # Example using CSVDataStore
-```from wpscraper import WPScraper, CSVDataStore  
+```
+from wpscraper import WPScraper, CSVDataStore  
 ds = CSVDataStore('result.csv')  
 scraper = WPScraper('techcrunch.com', ds)   
 scraper.scrape(100)  
@@ -32,7 +33,8 @@ scraper.save()
 ```
 
 # Example using SqliteDataStore
-```from wpscraper import WPScraper, SqliteDataStore  
+```
+from wpscraper import WPScraper, SqliteDataStore  
 ds = SqliteDataStore('techcrunch.db', 'techcrunch')  
 scraper = WPScraper('techcrunch.com', ds)  
 scraper.scrape(100)  
@@ -41,7 +43,6 @@ scraper.save()
 
 # To run unittest
 ```
-cd wpscraper  
 python -m unittest test_wpscraper  
 ```
 
