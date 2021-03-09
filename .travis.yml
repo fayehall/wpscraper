@@ -1,13 +1,16 @@
 language: python
 python:
-  - 3
+  - "3.5"
+
+virtualenv:
+  system_site_packages: true
+
+#Prer-testing installs
+intsall:
+  - pip install .
 
 services:
   - docker
-
-#Prer-testing installs
-install:
-  - echo "nothing needs to be installed"
 
 # Scripts to be run such as tests
 beforer_script:
