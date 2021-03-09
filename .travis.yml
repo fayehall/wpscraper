@@ -18,7 +18,7 @@ beforer_script:
   - echo "no tests"
 
 script:
-  - docker --verion # print the version for logging
+  - docker --version # print the version for logging
   - docker build -t wpscraper .
   - docker tag wpscraper lovesantacruz/wpscraper:latest
 
